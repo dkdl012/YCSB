@@ -51,7 +51,7 @@ If `rocksdb.optionsfile` is given, YCSB will apply all [RocksDB options](https:/
 Otherwise, YCSB will try to set reasonable defaults.
 
 **[IMPORTANT]** After compiling, please note to refer to YCSB/rocksdb/target/test-classes/testcase.ini. Its format is slightly different from the original rocksdb option file.
-```[CFOptions "usertable"]``` and ```[TableOptions/BlockBasedTable "usertable"]``` should be added on the rocksdb option file (formatted .ini). The original rocksdb option file has only four section: ```[Version]```, ```[DBOptions]```, ````[CFOptions "default"]```, and ```[TableOptions/BlockBasedTable "default"]```.
+```[CFOptions "usertable"]``` and ```[TableOptions/BlockBasedTable "usertable"]``` should be added on the rocksdb option file (formatted .ini). The original rocksdb option file has only four section: ```[Version]```, ```[DBOptions]```, ```[CFOptions "default"]```, and ```[TableOptions/BlockBasedTable "default"]```.
 
 If do not, this error will be thrown.
 
