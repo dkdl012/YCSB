@@ -52,3 +52,28 @@ Otherwise, YCSB will try to set reasonable defaults.
 
 **[IMPORTANT]** After compiling, please note to refer to YCSB/rocksdb/target/test-classes/testcase.ini. Its format is slightly different from the original rocksdb option file.
 ```[CFOptions "usertable"]``` and ```[TableOptions/BlockBasedTable "usertable"]``` should be added on the rocksdb option file (formatted .ini). The original rocksdb option file has only four section: ```[Version]```, ```[DBOptions]```, ````[CFOptions "default"]``, and ```[TableOptions/BlockBasedTable "default"]```.
+
+If do not, this error will be thrown.
+
+    site.ycsb.DBException: org.rocksdb.RocksDBException: You have to open all column families. Column families not opened: usertable
+        at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:80)
+        at site.ycsb.DBWrapper.init(DBWrapper.java:90)
+        at site.ycsb.ClientThread.run(ClientThread.java:91)
+        at java.lang.Thread.run(Thread.java:748)
+    Caused by: org.rocksdb.RocksDBException: You have to open all column families. Column families not opened: usertable
+        at org.rocksdb.RocksDB.open(Native Method)
+        at org.rocksdb.RocksDB.open(RocksDB.java:290)
+        at site.ycsb.db.rocksdb.RocksDBClient.initRocksDBWithOptionsFile(RocksDBClient.java:108)
+        at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:75)
+        ... 3 more
+    site.ycsb.DBException: org.rocksdb.RocksDBException: You have to open all column families. Column families not opened: usertable
+        at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:80)
+        at site.ycsb.DBWrapper.init(DBWrapper.java:90)
+        at site.ycsb.ClientThread.run(ClientThread.java:91)
+        at java.lang.Thread.run(Thread.java:748)
+    Caused by: org.rocksdb.RocksDBException: You have to open all column families. Column families not opened: usertable
+        at org.rocksdb.RocksDB.open(Native Method)
+        at org.rocksdb.RocksDB.open(RocksDB.java:290)
+        at site.ycsb.db.rocksdb.RocksDBClient.initRocksDBWithOptionsFile(RocksDBClient.java:108)
+        at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:75)
+        ... 3 more
