@@ -44,6 +44,7 @@ Then, run the workload:
     * EX. ```/tmp/ycsb-rocksdb-data```
 * ```rocksdb.optionsfile``` - A path to a [RocksDB options file](https://github.com/facebook/rocksdb/wiki/RocksDB-Options-File).
     * EX. ```ycsb-rocksdb-options.ini```
+    * Refer to ```YCSB/rocksdb/target/test-classes/testcase.ini```
 
 ## Note on RocksDB Options
 
